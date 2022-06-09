@@ -1,0 +1,159 @@
+/* @font-face kit by Fonts2u (https://fonts2u.com) */ 
+@font-face {
+    font-family: "Aniron";
+    src: url("Font/anirm___.eot?") format("eot"),
+            url("Font/anirm___.woff") format("woff"),
+            url("Font/anirm___.ttf") format("truetype"),
+            url("Font/anirm___.svg#Aniron") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+$base-yellow: #FFF000;
+$base-orange: #ff9900;
+$dark-orange: darken($base-orange, 5%);
+$primary-color: #000000;
+$secondary-color: #FFFFFF;
+
+@mixin flexColumn () {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+@mixin linkStyle () {
+    text-decoration: none;
+    color: $secondary-color;
+}
+
+@mixin ringGenerator($size, $color) {
+    width: #{$size};
+    height: #{$size};
+    border-radius: 50%;
+    border: #{$size}/10 solid #{$color};
+    box-shadow: #{$size}/50 #{$size}/50 #{$size}/50 #{$size}/50 darken(#{$color}, 10%);
+}
+
+
+* {
+    font-family: "Aniron";
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    padding: 0 30px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+    width: 60%;
+    margin: auto;
+    .twoRings {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
+        .ring {
+            @include ringGenerator(60px, $dark-orange);
+        }
+    }
+    .OneRing {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
+        .ring {
+            @include ringGenerator(160px, $base-yellow);
+        }
+    }
+    .sixRings {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 25vh;
+        h1 {
+            padding-top: 15px;
+        }
+        @for $var from 1 to 7 {
+            div {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                .ring:nth-child(#{$var}) {
+                    @include ringGenerator(15px*#{$var}, rgb(53, 53, 53));
+                    margin-left: -(15px * #{$var}) / 3;
+                }
+            }
+            
+        }
+    }
+}
+
+.header {
+    background-color: $dark-orange;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    border-bottom: 2px solid black;
+    padding: 0 10px;
+    .headerTitle {
+        a {
+            text-decoration: none;
+            color: $secondary-color;
+            font-size: calc(1em + 15%);
+        }
+    }
+    .headerLinks {
+        padding-right: 15px;
+        a {
+            @include linkStyle();
+            padding-left: 20px;
+        }
+    }
+}
+
+.footer {
+    background-color: $base-orange;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    border-top: 2px solid black;
+    .firstCol {
+        @include flexColumn();
+        a {
+            @include linkStyle();
+            padding-bottom: 20px;
+        }
+    }
+    .secondCol {
+        @include flexColumn();
+        a {
+            @include linkStyle();
+            padding-bottom: 20px;
+        }
+    }
+    .thirdCol {
+        @include flexColumn();
+        a {
+            @include linkStyle();
+        }
+        .miniLinks {
+            @include flexColumn();
+            padding-bottom: 30px;
+            a {
+                @include linkStyle();
+            }
+        }
+    }
+}
+
