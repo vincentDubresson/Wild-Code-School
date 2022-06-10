@@ -1,0 +1,17 @@
+{
+    "name": "vincent/php-composer-pack-management",
+    "autoload": {
+        "psr-4": {
+            "Add\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "vincentDubresson",
+            "email": "vincent-dubresson_student2022@wilder.school"
+        }
+    ],
+    "require": {
+        "gipetto/cowsay": "^1.1"
+    }
+}
