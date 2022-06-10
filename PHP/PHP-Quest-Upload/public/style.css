@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Send+Flowers&display=swap');
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.homerIdCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    height: 400px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+    border-radius: 30px;
+}
+
+.city {
+    background-color: rgb(0, 217, 255);
+    width: 100%;
+    height: 70px;
+    color: white;
+    font-size: 23px;
+    text-align: center;
+    border-radius: 30px 30px 0 0;
+    border-bottom: 1px solid black;
+}
+
+.licenceInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 80%;
+    height: 50px;
+}
+
+.licenceInfo p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 5px;
+}
+
+.driver {
+    display: flex;
+    justify-content: flex-start;
+    width: 90%;
+    height: 280px;
+}
+
+.driverPicture {
+    width: 35%;
+    border-radius: 10px;
+}
+
+.driverPicture img {
+    width: 180px;
+    height: 250px;
+    border-radius: 10px;
+    border: 1px solid black;
+}
+
+.driverInfo {
+    width: 70%;
+}
+
+.title {
+    background-color: rgb(0, 217, 255);
+    color: white;
+    text-align: center;
+    border: 1px solid black;
+    margin: 0 0 0 10px;
+    padding: 5px 10px;
+}
+
+.adress {
+    padding-top: 10px;
+    line-height: 16px;
+}
+
+.specifics {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+}
+
+.specifics p {
+    text-align: center;
+    font-size: 12px;
+    line-height: 5px;
+}
+
+.signature {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 3px;
+}
+
+.signature span {
+    font-family: 'Send Flowers', cursive;
+    font-size: 35px;
+}
+
+.addPicture {
+    margin-bottom: 15px;
+}
+
+
